@@ -1,0 +1,7 @@
+list_sites:
+  - domain: grafana.
+    port: 3000
+  - domain: influx.
+    port: 8086
+  - domain: promo
+    port: 9090

@@ -1,0 +1,8 @@
+# connect playbook project with all host
+
+- name: Clone project of the git repository and running
+  hosts: all
+  become: True
+  gather_facts: false
+  roles:
+    - project

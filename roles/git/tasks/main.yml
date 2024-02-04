@@ -1,0 +1,15 @@
+# install and config git
+
+- name: Install Git
+  apt:
+    name: git
+    state: present
+    update_cache: yes
+
+
+- name: Set Git user name
+  command: git config --global user.name "{{ GIT_USERNAME }}"
+
+
+- name: Set Git user email
+  command: git config --global user.email "{{ GIT_EMAIL }}"

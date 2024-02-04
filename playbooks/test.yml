@@ -1,0 +1,11 @@
+# this playbook for test and show all data info for a host
+# ansible-playbook playbook/test.yml 
+#just change localhost to your host name
+#you can use var {{ ansible_facts }} in all files
+
+- hosts: one
+  tasks:
+    - name: FACTS
+      debug:
+        msg: "{{ ansible_facts }}"
+        # msg: {{ ansible_facts.default_ip4.address }}

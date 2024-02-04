@@ -1,0 +1,28 @@
+# install and config nginx
+
+- name: install nginx
+  apt: 
+    name: nginx 
+    state: latest
+    update_cache: yes
+
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+
+- name: copy nginx configurations
+  ansible.builtin.template:
+    src: var/www/nginx/sites-enabled/nginx.conf.j2
+    dest: "/var/www/nginx/sites-enabled/{{ site.doamin }}"
+  with_item: "{{ list_sites }}"
+  notify:
+    - Reload Nginx 
+
+- name: start nginx
+  service:
+    name: nginx
+    state: restarted

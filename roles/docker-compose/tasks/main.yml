@@ -1,0 +1,11 @@
+
+
+- name: Install Docker Compose
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64"
+    dest: /usr/local/bin/docker-compose
+    mode: 'a+x'
+  environment:
+    https_proxy: "{{ https_proxy default('') }}"
+    http_proxy: "{{ http_proxy default('') }}"
+  notify: Restart docker

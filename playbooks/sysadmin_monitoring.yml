@@ -1,0 +1,8 @@
+# connect playbook sysadmin_monitoring with all host
+
+- name: clone and running git 
+  hosts: all
+  become: True
+  gather_facts: false
+  roles:
+    - sysadmin_monitoring

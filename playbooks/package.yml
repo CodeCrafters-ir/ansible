@@ -1,0 +1,8 @@
+# connect playbook package with all host
+
+- name: install multi package in linux
+  hosts: all
+  become: True
+  gather_facts: false
+  roles:
+    - package

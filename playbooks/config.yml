@@ -1,0 +1,3 @@
+# import and install all playbooks
+
+- import_playbook: project.yml

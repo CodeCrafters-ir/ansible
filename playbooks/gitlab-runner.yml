@@ -1,0 +1,9 @@
+# connect playbook package with all host
+
+
+- name: install gitlab runner
+  hosts: all
+  become: True
+  gather_facts: false
+  roles:
+    - gitlab-runner

@@ -1,0 +1,32 @@
+#all my host
+
+all:
+  hosts:
+    backend:
+      ansible_host: "{{backend_ip}}"
+    frontend:
+      ansible_host: "{{frontend_ip}}"
+    postgres:
+      ansible_host: "{{postgres_ip}}"
+    redis:
+      ansible_host: "{{redis_ip}}"
+
+web:
+  hosts:
+    backend:
+      ansible_host: "{{backend_ip}}"
+    frontend:
+      ansible_host: "{{frontend_ip}}"
+
+db:
+  hosts:
+    postgres:
+      ansible_host: "{{postgres_ip}}"
+    redis: 
+      ansible_host: "{{redis_ip}}"
+
+one:
+  hosts:
+    first:
+      ansible_host: "{{ MY_HOST_IP }}"
+      ansible_user: "{{ MY_HOST_USERNAME }}"

@@ -1,0 +1,8 @@
+# connect playbook package with all host
+
+- name: change config ssh
+  hosts: all
+  become: True
+  gather_facts: false
+  roles:
+    - ssh

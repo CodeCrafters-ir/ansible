@@ -1,0 +1,26 @@
+# for jobs my project
+
+
+- name: create directory if they don't exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0777
+  loop:
+    - /var/www/monitoring
+
+
+- name: Clone a sysadmin_monitoring github repository
+  git:
+    repo: "{{ monitoring_repo_url }}"
+    dest: /var/www/monitoring/
+    clone: yes
+    update: yes
+
+
+- name: Run docker compose up -d
+  command: docker compose up -d
+  args:
+    chdir: /var/www/monitoring/

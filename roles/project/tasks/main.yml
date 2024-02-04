@@ -1,0 +1,29 @@
+# for jobs my project
+
+
+- name: create directory if they don't exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0777
+  loop:
+    - /var/www/backend/
+    - /var/www/frontend/
+
+
+- name: clone backend project from git
+  git:
+    repo: "https://{{ GIT_USER }}:{{ GIT_TOKEN }}@{{ URL_BACKEND }}"  
+    dest: /var/www/backend/
+    version: "{{ GIT_VERSION }}"
+    clone: yes
+
+
+- name: clone frontend project from git
+  git:
+    repo: "https://{{ GIT_USER }}:{{ GIT_TOKEN }}@{{ URL_FRONTEND }}" 
+    dest: /var/www/frontend/
+    version: "{{ GIT_VERSION }}"
+    clone: yes

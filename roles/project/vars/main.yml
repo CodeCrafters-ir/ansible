@@ -1,0 +1,5 @@
+GIT_USER: github username 
+GIT_TOKEN: github token
+GIT_VERSION: main
+URL_FRONTEND: url without https:://
+URL_BACKEND: url without https:://
