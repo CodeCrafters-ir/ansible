@@ -91,10 +91,12 @@ ssh username@server_address
     6-7:meta directory for do difference task
 
 7-ansible.cfg file is settings global ansible and configuration customize
+```
 
+‍‍‍‍‍‍
 توضیحات بالا به فارسی
 
-1. دایرکتوری group_vars: برای متغیرهای گروهی
+**1. دایرکتوری group_vars: برای متغیرهای گروهی**
 
 - متغیرهایی را که برای همه میزبان‌های درون یک گروه در فایل inventory اصلی اعمال می‌شوند، ذخیره می‌کند.
 
@@ -137,4 +139,3 @@ ssh username@server_address
 
 - تنظیمات و پیکربندی‌های سفارشی Ansible را در خود جای می‌دهد.
 
-```
