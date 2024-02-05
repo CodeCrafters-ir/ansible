@@ -5,13 +5,7 @@
     name: nginx 
     state: latest
     update_cache: yes
-
-
-- name: start nginx
-  service:
-    name: nginx
-    state: started
-    enabled: yes
+  notify: active_nginx
 
 
 - name: copy nginx configurations
@@ -19,10 +13,5 @@
     src: var/www/nginx/sites-enabled/nginx.conf.j2
     dest: "/var/www/nginx/sites-enabled/{{ site.doamin }}"
   with_item: "{{ list_sites }}"
-  notify:
-    - Reload Nginx 
+  notify: restart_nginx
 
-- name: start nginx
-  service:
-    name: nginx
-    state: restarted

@@ -1,0 +1,4 @@
+# for import handlers, handler is one work use
+
+- include_tasks: common/handlers/restart_nginx.yml
+- include_tasks: common/handlers/active_nginx.yml

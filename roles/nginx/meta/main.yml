@@ -1,0 +1,5 @@
+# three work: 1-faile a task , 2-include tasks, 3-assing tag to task
+
+dependencies:
+- role: common
+  version: 1.0.0
