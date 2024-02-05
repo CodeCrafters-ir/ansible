@@ -60,7 +60,7 @@ ssh username@server_address
 ```
 
 
-# description ansible:
+# توضیحات ansible:
 ```
 1-group_vars directory for varibles in any group in main inventory
 
@@ -78,7 +78,7 @@ ssh username@server_address
         running all settings for   ansible command
 
 6-roles directory:
-    description: in this directory we define tasks for run , every roles install or config
+    توضیحات: in this directory we define tasks for run , every roles install or config
         a package or work or config and every role have one or multi task in multi directories
     6-1:for every yaml file in playbooks directory (without config file)
         we have a directory with same name file, every directory do a work, in subdirectory 
@@ -112,14 +112,14 @@ ssh username@server_address
 
 **5. دایرکتوری playbooks: برای playbook ها**
 
-- **description:**
+- **توضیحات:**
     - شامل چندین فایل YAML است که هر کدام یک playbook را تعریف می‌کنند.
     - هر فایل به یک زیردایرکتوری در دایرکتوری roles متصل می‌شود تا نقش‌ها را به میزبان‌ها پیوند دهد.
     - فایل config.yml برای وارد کردن سایر فایل‌های playbook و اجرای تنظیمات کلی Ansible استفاده می‌شود.
 
 **6. دایرکتوری roles: برای تعریف نقش‌ها**
 
-- **description:**
+- **توضیحات:**
     - وظایفی را که باید اجرا شوند، تعریف می‌کند.
     - هر نقش یک بسته، کار یا تنظیمات را نصب یا پیکربندی می‌کند.
     - هر نقش می‌تواند شامل یک یا چند وظیفه در دایرکتوری‌های مختلف باشد.
