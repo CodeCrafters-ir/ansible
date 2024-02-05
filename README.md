@@ -60,7 +60,7 @@ ssh username@server_address
 ```
 
 
-# توضیحات ansible:
+# describe ansible:
 ```
 1-group_vars directory for varibles in any group in main inventory
 
@@ -78,7 +78,7 @@ ssh username@server_address
         running all settings for   ansible command
 
 6-roles directory:
-    توضیحات: in this directory we define tasks for run , every roles install or config
+    describe: in this directory we define tasks for run , every roles install or config
         a package or work or config and every role have one or multi task in multi directories
     6-1:for every yaml file in playbooks directory (without config file)
         we have a directory with same name file, every directory do a work, in subdirectory 
@@ -94,6 +94,8 @@ ssh username@server_address
 ```
 
 ‍‍‍‍‍‍```
+توضیحات بالا به فارسی
+
 **1. دایرکتوری group_vars: برای متغیرهای گروهی**
 
 - متغیرهایی را که برای همه میزبان‌های درون یک گروه در فایل inventory اصلی اعمال می‌شوند، ذخیره می‌کند.
@@ -136,5 +138,6 @@ ssh username@server_address
 **7. فایل ansible.cfg: برای تنظیمات کلی Ansible**
 
 - تنظیمات و پیکربندی‌های سفارشی Ansible را در خود جای می‌دهد.
+
 
 ```
